@@ -67,7 +67,7 @@ def analyseWinDir(folderName):
                 potentialCanary = os.path.join(folderName, 'desktop.ini')
 
         for line in codecs.open(potentialCanary, 'r', encoding='utf16'):
-            if canaryStringFirst in line:
+            if canaryString in line:
                 print('The folder is a canarytoken!')
     except: 
         print('The folder is clean!')
